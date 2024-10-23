@@ -85,6 +85,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-completions
+    fzf-tab
     history-substring-search
     history
     sudo
@@ -92,6 +93,7 @@ plugins=(
     copypath
     copybuffer
     copypath
+    fzf
 )
 
 # Ladda plugins
@@ -149,3 +151,13 @@ source $ZSH/oh-my-zsh.sh
 
 export PAGER="most"
 alias cat='batcat'
+alias batcat='bat'
+alias vi='vim'
+# Lägg till FZF init-skript (laddar in funktioner)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Bind Ctrl+R till fzf
+bindkey '^R' fzf-history-widget
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
+export TERM=xterm-256color
+
