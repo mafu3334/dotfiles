@@ -79,12 +79,19 @@ PROMPT='%F{green}%n@%m %F{blue}%* %F{cyan}%~ %f '
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # Aktivera plugins
+
 plugins=(
     git
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-completions
     history-substring-search
+    history
+    sudo
+    web-search
+    copypath
+    copybuffer
+    copypath
 )
 
 # Ladda plugins
@@ -140,4 +147,5 @@ source $ZSH/oh-my-zsh.sh
 . ~/z/z.sh
 
 
+export PAGER="most"
 alias cat='batcat'
